@@ -4,7 +4,7 @@
 library;
 
 export 'src/content_scaffold.dart';
-export 'src/controller.dart' hide SheetControllerScope;
+export 'src/controller.dart';
 export 'src/cupertino.dart';
 export 'src/decorations.dart';
 export 'src/drag.dart' hide SheetDragController, SheetDragControllerTarget;

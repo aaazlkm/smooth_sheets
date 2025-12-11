@@ -159,7 +159,7 @@ class _DefaultSheetControllerState extends State<DefaultSheetController> {
   }
 }
 
-@internal
+// @internal
 class SheetControllerScope extends InheritedWidget {
   const SheetControllerScope({
     super.key,

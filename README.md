@@ -1,3 +1,33 @@
+# fork from https://github.com/fujidaiti/smooth_sheets
+
+this is a fork of https://github.com/fujidaiti/smooth_sheets
+
+## Branching Strategy
+
+- `upstream-main`
+
+  - Mirrors the original repository’s `main` branch (upstream).
+  - Do not commit directly to this branch.
+  - Update it by fetching from `upstream/main` and using `git reset --hard`.
+
+- `my-main`
+
+  - Main development branch of this fork (set as the default branch).
+  - All myizations for this fork are merged into `my-main`.
+  - Regularly rebase or merge `upstream-main` into `my-main` to keep up with upstream changes.
+
+- `feature/*`
+
+  - Create feature branches from `my-main` for new features or fixes (e.g. `feature/new-widget`).
+  - After work is done, open a Pull Request from `feature/*` to `my-main` and merge after review.
+
+- Pulling in upstream changes
+
+  - First, update `upstream-main` from `upstream/main`.
+  - Then rebase or merge `upstream-main` into `my-main` to apply the latest upstream changes.
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
 # smooth_sheets
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fujidaiti/smooth_sheets)](https://github.com/fujidaiti/smooth_sheets) [![Pub Version](https://img.shields.io/pub/v/smooth_sheets)](https://pub.dev/packages/smooth_sheets) ![Pub Likes](https://img.shields.io/pub/likes/smooth_sheets) ![Pub Points](https://img.shields.io/pub/points/smooth_sheets)
@@ -97,7 +127,7 @@ See [here](https://github.com/fujidaiti/smooth_sheets/tree/main/migrations) for 
 There are few packages on pub.dev that supports nested navigation with motion animation for page transitions. One of the great choices for this usecase is [wolt_modal_sheet](https://github.com/woltapp/wolt_modal_sheet), which this package is inspired by. Although smooth_sheet has similar features with wolt_modal_sheet, it is not intended to be a replacement of that package. Here is some differences between those 2 packages:
 
 |                        |                                                             wolt_modal_sheet                                                              |                             smooth_sheets                              |
-|:----------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------:|
+| :--------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------: |
 |         Design         | Based on Wolt's [design guideline](https://careers.wolt.com/en/blog/tech/an-overview-of-the-multi-page-scrollable-bottom-sheet-ui-design) |        Not restricted to a specific design, fully customizable         |
 |  Navigation mechanism  |                        [Manage the page index in ValueNotifier](https://github.com/woltapp/wolt_modal_sheet#usage)                        | Works with built-in Navigator API (both of imperative and declarative) |
 |   Scrollable content   |                                [Supported](https://github.com/woltapp/wolt_modal_sheet#scrollable-content)                                |                               Supported                                |
@@ -179,7 +209,7 @@ See also:
 - [SwipeDismissSensitivity](https://pub.dev/documentation/smooth_sheets/latest/smooth_sheets/SwipeDismissSensitivity-class.html), which can be used to tweak the sensitivity of the swipe-to-dismiss action.
 - [declarative_modal_sheet.dart](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/tutorial/declarative_modal_sheet.dart), a tutorial of integration with declarative navigation using [go_router](https://pub.dev/packages/go_router) package.
 - [imperative_modal_sheet.dart](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/tutorial/imperative_modal_sheet.dart), a tutorial of integration with imperative Navigator API.
-- [cupertino_modal_sheet.dart](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/tutorial/cupertino_modal_sheet.dart),  a tutorial of iOS style modal sheets.
+- [cupertino_modal_sheet.dart](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/tutorial/cupertino_modal_sheet.dart), a tutorial of iOS style modal sheets.
 - [ios_style_declarative_modal_paged_sheet.dart](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/tutorial/ios_style_declarative_modal_paged_sheet.dart), an example of iOS-style modal PagedSheet with go_router.
 - [showcase/todo_list](https://github.com/fujidaiti/smooth_sheets/blob/main/example/lib/showcase/todo_list), which uses SheetDismissible to show a confirmation dialog when the user tries to discard the todo editing sheet without saving the content.
 
